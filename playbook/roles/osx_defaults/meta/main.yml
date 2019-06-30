@@ -1,0 +1,7 @@
+---
+ dependencies:
+   - role: osx_defaults/dock
+   - role: osx_defaults/trackpad
+   - role: osx_defaults/finder
+   #- role: osx_defaults/key
+   - role: osx_defaults/other

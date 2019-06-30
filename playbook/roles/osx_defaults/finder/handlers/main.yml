@@ -1,0 +1,4 @@
+---
+ - name: "restart finder"
+   command: |
+     killall "Finder"

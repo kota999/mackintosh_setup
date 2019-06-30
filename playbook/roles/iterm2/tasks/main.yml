@@ -1,0 +1,10 @@
+---
+ - name: git clone solarized, import and select color theme from iterm2 -> Preferences -> Profiles -> Color
+   git: repo="https://github.com/altercation/solarized.git" dest="~/dotfiles/solarized" accept_hostkey=yes
+
+ - name: copy iterm2 conf, import from iterm2 -> Preferences -> General -> Preferences
+   copy:
+     src: "{{ iterm2_conf }}"
+     dest: "~/dotfiles/{{ iterm2_conf }}"
+
+

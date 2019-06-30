@@ -1,0 +1,10 @@
+---
+- hosts: local
+  connection: local
+  roles:
+    - brew
+    - osx_defaults
+    #- dotfiles
+    - zsh
+    - iterm2
+    - anyenv

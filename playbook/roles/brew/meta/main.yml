@@ -1,0 +1,5 @@
+---
+ dependencies:
+   - role: brew/core 
+   - role: brew/cask
+   - role: brew/module 

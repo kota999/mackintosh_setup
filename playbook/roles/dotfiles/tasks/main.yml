@@ -1,0 +1,11 @@
+---
+ - name: git clone dotfiles
+   git: repo={{ git_url }} dest=~/dotfiles accept_hostkey=yes
+
+ - name: set symlink of my conf
+   file:
+     src: "{{ item.src }}"
+     dest: "{{ item.dest }}"
+     state: link
+   with_items: "{{ symlink_confs }}"
+

@@ -1,0 +1,37 @@
+---
+ - name: git clone anyenv
+   git: repo="https://github.com/riywo/anyenv" dest=~/.anyenv accept_hostkey=yes
+
+ - name: anyenv install init
+   shell: >-
+     if ! [ -e "{{ ansible_env.HOME  }}/.config/anyenv/anyenv-install" ] ; then
+       echo y | $HOME/.anyenv/bin/anyenv install --init ;
+     fi
+
+ - name: add PATH for anyenv
+   blockinfile:
+     dest: ~/.zshenv
+     block: |
+        if [ -d ${HOME}/.anyenv ] ; then
+          export PATH="$HOME/.anyenv/bin:$PATH"
+          eval "$(anyenv init -)"
+          for D in `ls $HOME/.anyenv/envs`
+          do
+            export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+          done
+        fi
+
+ - name: install *env
+   shell: >-
+     source ~/.zshenv ;
+     if ! [ -e "{{ ansible_env.HOME  }}/.anyenv/envs/{{ item }}" ] ; then
+       anyenv install "{{ item }}" ;
+     fi
+     executable=/bin/zsh
+   with_items: "{{ envs }}"
+   vars:
+     envs:
+        - "rbenv"
+        - "nodenv"
+        - "pyenv"
+

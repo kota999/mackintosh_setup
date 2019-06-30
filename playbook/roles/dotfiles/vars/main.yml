@@ -1,0 +1,10 @@
+git_url: "git://github.com/kota999/dotfiles.git"
+symlink_confs:
+ - src: ~/dotfiles/zshrc
+   dest: ~/.zshrc
+ - src: ~/dotfiles/zshenv
+   dest: ~/.zshenv
+ - src: ~/dotfiles/.tmux.conf
+   dest: ~/.tmux.conf
+ - src: ~/dotfiles/vim/vimrc
+   dest: ~/.vimrc

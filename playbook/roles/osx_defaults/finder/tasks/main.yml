@@ -1,0 +1,43 @@
+---
+ - name: Finder Setting
+   osx_defaults:
+     domain: "{{ item.domain  }}"
+     key: "{{ item.key }}"
+     type: "{{ item.type }}"
+     value: "{{ item.value }}"
+   with_items: "{{ finder_settings }}"
+   notify: "restart finder"
+   vars:
+     finder_settings:
+       - domain: com.apple.finder
+         key: AppleShowAllFiles
+         type: bool
+         value: true
+       - domain: NSGlobalDomain
+         key: AppleShowAllExtensions
+         type: bool
+         value: TRUE
+       - domain: com.apple.finder
+         key: _FXShowPosixPathInTitle
+         type: bool
+         value: TRUE
+       - domain: com.apple.finder
+         key: ShowStatusBar
+         type: bool
+         value: TRUE
+       - domain: com.apple.finder
+         key: ShowPathbar
+         type: bool
+         value: TRUE
+       - domain: com.apple.finder
+         key: ShowTabView
+         type: bool
+         value: TRUE
+       - domain: com.apple.finder
+         key: NewWindowTarget
+         type: string
+         value: "PfHm"
+       - domain: com.apple.finder
+         key: NewWindowTargetPath
+         type: string
+         value: "file://{{ ansible_env.HOME }}/"

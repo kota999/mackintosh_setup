@@ -1,0 +1,16 @@
+---
+ - name: Setting show battey
+   osx_defaults:
+     domain: com.apple.menuextra.battery
+     key: ShowPercent
+     type: string
+     value: "YES"
+     state: present
+
+ - name: Setting show clock
+   osx_defaults:
+     domain: com.apple.menuextra.clock
+     key: DateFormat
+     type: string
+     value: "H:mm"
+     state: present

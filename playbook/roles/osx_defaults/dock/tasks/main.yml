@@ -1,0 +1,23 @@
+---
+ - name: Dock Setting 
+   osx_defaults:
+     domain: "{{ item.domain  }}"
+     key: "{{ item.key }}"
+     type: "{{ item.type }}"
+     value: "{{ item.value }}"
+   with_items: "{{ dock_settings }}"
+   notify: "restart dock"
+   vars:
+     dock_settings:
+       - domain: com.apple.dock
+         key: orientation
+         type: string
+         value: right
+       - domain: com.apple.dock   
+         key: tilesize
+         type: float
+         value: 36
+       - domain: com.apple.dock    
+         key: largesize
+         type: float
+         value: 65

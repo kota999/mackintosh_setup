@@ -1,0 +1,17 @@
+homebrew_packages:
+ - name: bat
+ - name: ctags
+ - name: gnu-tar
+ - name: git
+ - name: jid
+ - name: jo
+ - name: jq
+ - name: openssl
+ - name: peco
+ - name: pipenv
+ - name: reattach-to-user-namespace
+ - name: szip
+ - name: tmux
+ - name: wget
+ - name: zsh
+ - name: zsh-completion

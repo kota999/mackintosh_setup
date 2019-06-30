@@ -1,0 +1,24 @@
+---
+ - name: enable right click
+   osx_defaults:
+     domain: com.apple.AppleMultitouchTrackpad
+     key: TrackpadCornerSecondaryClick
+     type: int
+     value: 2
+     state: present
+
+ - name: enable touch click
+   osx_defaults:
+     domain: com.apple.AppleMultitouchTrackpad
+     key: Clicking
+     type: int
+     value: 1
+     state: present
+
+ - name: setting max-speed for trackpad
+   osx_defaults:
+     domain: GlobalPreferences
+     key: com.apple.trackpad.scaling
+     type: float
+     value: 3
+     state: present

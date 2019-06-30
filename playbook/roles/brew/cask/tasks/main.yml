@@ -1,0 +1,7 @@
+---
+  - name: homebrew cask packages install
+    homebrew_cask: name={{ item.name }} state=installed
+    # ※1 GUIツールをインストールする場所を `/Application` に固定
+    environment:
+      HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+    with_items: '{{ homebrew_cask_packages }}'
