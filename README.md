@@ -31,9 +31,6 @@ Show below.
    + rbnev
      + [versions](./playbook/roles/anyenv/rbenv/vars/main.yml)
 
-#### Install Python modules
- + [Show here](./playbook/roles/python/vars/main.yml)
-
 ### Software Settings
  + Dock
    + Orientation of dock is right
