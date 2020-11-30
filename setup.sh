@@ -19,11 +19,9 @@ brew update
 echo "#"
 echo "# Install ansible"
 echo "#"
-echo "# -> Install pip"
-sudo easy_install pip
-sudo pip install -U pip
 echo "# -> Install ansible"
-sudo pip install ansible
+brew install ansible@2.8 # The homebrew_cask module has bug at 10.2.2+,
+brew link ansible@2.8    # 10.2.1 > more later formula is 2.8
 
 echo "#"
 echo "# Setup Mac"
@@ -35,11 +33,13 @@ cd ../
 echo "#"
 echo "# Manual Settings ..."
 echo "#"
-echo "# -> Install below apps manualy"
-echo "#    -> Amphetamine"
-echo "#    -> Pocket"
-echo "#    -> LINE"
 echo "# -> Register start-up apps manualy"
 echo "# -> Fierwall On manualy"
 echo "# -> ssh cofiguration"
 echo "#    References: https://qiita.com/reflet/items/0c338df07d9f6c6ef776"
+echo "# -> enable brew autoupdate (trial)"
+echo "$ mkdir -p /Users/hogehoge/Library/LaunchAgents"
+echo "$ brew autoupdate --start --upgrade --cleanup --enable-notification"
+echo "# -> install visual studio code plugin"
+echo "#    1. install `setting sync`"
+echo "#    2. Sync my visual studio code settings"

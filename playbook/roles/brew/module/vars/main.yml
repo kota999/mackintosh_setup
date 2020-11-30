@@ -1,17 +1,22 @@
 homebrew_packages:
  - name: bat
  - name: ctags
+ - name: direnv
+ - name: docker-compose
  - name: gnu-tar
  - name: git
+ - name: ghq
  - name: jid
  - name: jo
  - name: jq
+ - name: mas
  - name: openssl
  - name: peco
  - name: pipenv
  - name: reattach-to-user-namespace
  - name: szip
  - name: tmux
+ - name: terminal-notifier
  - name: wget
  - name: zsh
  - name: zsh-completion

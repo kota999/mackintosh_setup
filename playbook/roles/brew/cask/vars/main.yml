@@ -1,31 +1,23 @@
 homebrew_cask_packages:
   - name: adobe-acrobat-reader
-  - name: alfred3
+  - name: alfred
   - name: appcleaner
   - name: bettertouchtool
-  - name: betterzip
   - name: cakebrew
   - name: cheatsheet
   - name: clamxav
   - name: clipy
   - name: coteditor
-  - name: dash
+  #- name: dash
   - name: docker
-  - name: dropbox
-  - name: duet
-  - name: evernote
-  - name: font-hack-nerd-font
+  - name: dozer
+  #- name: dropbox
+  #- name: evernote
+  - name: github
   - name: google-chrome
-  - name: hyperdock
   - name: iterm2
   - name: itsycal
-  - name: qlcolorcode
-  - name: qlimagesize
-  - name: qlmarkdown
-  - name: qlstephen
-  - name: quicklook-json
-  - name: station
+  - name: notion
+  - name: openinterminal
   - name: skitch
   - name: visual-studio-code
-  - name: vivaldi
-  - name: xquartz
