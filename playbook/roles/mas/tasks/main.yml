@@ -1,0 +1,12 @@
+---
+- block:
+  - name: fetch installed list by using mas cli
+    command: mas list
+    register: installed_list
+    check_mode: no
+    changed_when: no
+
+  - name: install app from App Store
+    command: "mas install {{ item.id }}"
+    when: "installed_list.stdout_lines | select('search', item.id) | list | length == 0"
+    loop: "{{ mas_apps }}"

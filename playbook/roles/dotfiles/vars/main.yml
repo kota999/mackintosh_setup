@@ -6,5 +6,5 @@ symlink_confs:
    dest: ~/.zshenv
  - src: ~/dotfiles/.tmux.conf
    dest: ~/.tmux.conf
- - src: ~/dotfiles/vim/vimrc
-   dest: ~/.vimrc
+ #- src: ~/dotfiles/vim/vimrc
+ #  dest: ~/.vimrc

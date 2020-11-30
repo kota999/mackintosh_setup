@@ -3,8 +3,8 @@
   connection: local
   roles:
     - brew
+    - mas
     - osx_defaults
-    #- dotfiles
+    - dotfiles
     - zsh
-    - iterm2
     - anyenv
