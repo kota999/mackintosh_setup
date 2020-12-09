@@ -8,19 +8,6 @@
        echo y | $HOME/.anyenv/bin/anyenv install --init ;
      fi
 
- - name: add PATH for anyenv
-   blockinfile:
-     dest: ~/.zshenv
-     block: |
-        if [ -d ${HOME}/.anyenv ] ; then
-          export PATH="$HOME/.anyenv/bin:$PATH"
-          eval "$(anyenv init -)"
-          for D in `ls $HOME/.anyenv/envs`
-          do
-            export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
-          done
-        fi
-
  - name: install *env
    shell: >-
      source ~/.zshenv ;

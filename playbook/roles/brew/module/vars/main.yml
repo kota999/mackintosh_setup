@@ -3,6 +3,7 @@ homebrew_packages:
  - name: ctags
  - name: direnv
  - name: docker-compose
+ - name: exa
  - name: gnu-tar
  - name: git
  - name: ghq
@@ -14,6 +15,7 @@ homebrew_packages:
  - name: peco
  - name: pipenv
  - name: reattach-to-user-namespace
+ - name: speedtest-cli
  - name: szip
  - name: tmux
  - name: terminal-notifier

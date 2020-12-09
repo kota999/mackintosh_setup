@@ -3,6 +3,7 @@ homebrew_cask_packages:
   - name: alfred
   - name: appcleaner
   - name: bettertouchtool
+  - name: biscuit
   - name: cakebrew
   - name: cheatsheet
   - name: clamxav
@@ -13,10 +14,13 @@ homebrew_cask_packages:
   - name: dozer
   #- name: dropbox
   #- name: evernote
+  - name: font-fontawesome
   - name: github
   - name: google-chrome
+  - name: insomnia
   - name: iterm2
   - name: itsycal
+  - name: kindle
   - name: notion
   - name: openinterminal
   - name: skitch

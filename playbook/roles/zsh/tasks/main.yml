@@ -4,3 +4,25 @@
      name: "{{ ansible_env.USER }}"
      shell: "/bin/zsh"
    become: yes
+
+ - name: add PATH to .zshenv
+   blockinfile:
+     dest: ~/.zshenv
+     block: |
+       # for exa
+       alias ls='exa --time-style=long-iso -g'
+       alias ll='ls --git --time-style=long-iso -gl'
+       alias la='ls --git --time-style=long-iso -agl'
+       alias l1='exa -1'
+       # for anyenv
+       if [ -d ${HOME}/.anyenv ] ; then
+         export PATH="$HOME/.anyenv/bin:$PATH"
+         eval "$(anyenv init -)"
+         for D in `ls $HOME/.anyenv/envs`
+         do
+           export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+         done
+       fi
+       # for direnv
+       export EDITOR=vi
+       eval "$(direnv hook zsh)"
