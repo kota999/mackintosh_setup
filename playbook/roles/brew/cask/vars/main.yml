@@ -15,6 +15,7 @@ homebrew_cask_packages:
   #- name: dropbox
   #- name: evernote
   - name: font-fontawesome
+  - name: font-source-han-code-jp
   - name: github
   - name: google-chrome
   - name: insomnia
