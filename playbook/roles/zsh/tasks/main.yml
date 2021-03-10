@@ -9,6 +9,8 @@
    blockinfile:
      dest: ~/.zshenv
      block: |
+       # for homebrew
+       eval "$(/opt/homebrew/bin/brew shellenv)"
        # for exa
        alias ls='exa --time-style=long-iso -g'
        alias ll='ls --git --time-style=long-iso -gl'
