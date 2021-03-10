@@ -1,12 +1,16 @@
 homebrew_packages:
  - name: bat
  - name: ctags
+ - name: choose
+ - name: csview
  - name: direnv
  - name: docker-compose
  - name: exa
  - name: gnu-tar
  - name: git
+ - name: git-delta
  - name: ghq
+ - name: hexyl
  - name: jid
  - name: jo
  - name: jq
@@ -18,7 +22,9 @@ homebrew_packages:
  - name: speedtest-cli
  - name: szip
  - name: tmux
+ - name: tokei
  - name: terminal-notifier
  - name: wget
+ - name: yq
  - name: zsh
  - name: zsh-completion

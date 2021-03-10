@@ -24,4 +24,5 @@ homebrew_cask_packages:
   - name: notion
   - name: openinterminal
   - name: skitch
+  - name: spaceman
   - name: visual-studio-code
