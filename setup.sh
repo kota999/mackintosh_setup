@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "# Install xcode from AppStore"
-echo "# DownLoad setup shell from github"
-
 echo "#"
 echo "# Install xcode-command line tool"
 echo "#"
@@ -12,7 +9,7 @@ sudo xcode-select --install
 echo "#"
 echo "# Install and Update homebrew "
 echo "#"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew doctor
 brew update
 
