@@ -1,0 +1,8 @@
+---
+- name: ghq root
+  shell: >-
+    source ~/.zshenv ;
+    git config --global ghq.root '~/work';
+
+- name: prepare ghq root dir
+  file: path=~/work state=directory
