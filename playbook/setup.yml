@@ -7,4 +7,5 @@
     - osx_defaults
     - dotfiles
     - zsh
-    - anyenv
+    - asdf
+    - cargo

@@ -1,15 +1,19 @@
 homebrew_packages:
+ - name: asdf
  - name: bat
+ - name: broot
  - name: ctags
  - name: choose
  - name: csview
  - name: direnv
  - name: docker-compose
  - name: exa
+ - name: fzf
  - name: gnu-tar
  - name: git
  - name: git-delta
  - name: ghq
+ - name: gpg
  - name: hexyl
  - name: jid
  - name: jo
@@ -17,14 +21,17 @@ homebrew_packages:
  - name: mas
  - name: openssl
  - name: peco
- - name: pipenv
  - name: reattach-to-user-namespace
+ - name: ripgrep
+ - name: rust
  - name: speedtest-cli
  - name: szip
  - name: tmux
  - name: tokei
  - name: terminal-notifier
+ - name: watchexec
  - name: wget
  - name: yq
  - name: zsh
  - name: zsh-completion
+ - name: zoxide
