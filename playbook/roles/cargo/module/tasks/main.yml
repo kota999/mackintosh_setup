@@ -1,0 +1,14 @@
+---
+ - name: install cargo module
+   shell: >-
+     source ~/.zshenv ;
+     cargo install "{{ item }}"
+     executable=/bin/zsh
+   with_items: "{{ lib }}"
+   vars:
+     lib:
+        - "silicon"
+   # cargo install and exist result is always 0
+   #register: cargo_result
+   #failed_when: cargo_result.rc not in [0]
+

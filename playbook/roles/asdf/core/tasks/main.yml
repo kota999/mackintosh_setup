@@ -1,0 +1,15 @@
+---
+ - name: install plugin
+   shell: >-
+     source ~/.zshenv ;
+     asdf plugin add "{{ item }}"
+     executable=/bin/zsh
+   with_items: "{{ plugin }}"
+   vars:
+     plugin:
+        - "python"
+        - "nodejs"
+        - "golang"
+   register: asdf_result
+   failed_when: asdf_result.rc not in [0, 2]
+
